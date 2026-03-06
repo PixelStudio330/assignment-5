@@ -50,7 +50,7 @@ function filterIssues(status) {
     updateTabUI(status);
 }
 
-// Data Fetching with Loading Spinner logic
+// Data Fetching 
 async function fetchIssues() {
     const loader = document.getElementById('loader');
     try {
@@ -104,7 +104,7 @@ function updateIssueHeader(count) {
         countText.innerHTML = `
             <div class="flex items-center gap-3">
                 <div class="w-12 h-12 bg-indigo-50 rounded-full flex items-center justify-center flex-shrink-0">
-                    <img src="Aperture.png" alt="Icon" class="w-8 h-8 object-contain">
+                    <img src="assets/Aperture.png" alt="Icon" class="w-8 h-8 object-contain">
                 </div>
                 <div class="text-left">
                     <h2 class="text-xl font-bold text-[#111827] leading-tight">${count} Issues</h2>
@@ -115,7 +115,7 @@ function updateIssueHeader(count) {
     }
 }
 
-// Rendering function
+// Rendering
 function renderIssues(issues) {
     const container = document.getElementById('issuesContainer');
     container.innerHTML = '';
@@ -127,9 +127,9 @@ function renderIssues(issues) {
 
     issues.forEach(issue => {
         const isOpen = issue.status.toLowerCase() === 'open';
-        // Open card = Green Top Border, Closed card = Purple Top Border
         const topBorder = isOpen ? 'border-t-[#10B981]' : 'border-t-[#8B5CF6]';
-        const statusIcon = isOpen ? 'Open-Status.png' : 'Closed-Status.png';
+        // Updated path to assets/
+        const statusIcon = isOpen ? 'assets/Open-Status.png' : 'assets/Closed-Status.png';
         const priorityStyle = getPriorityStyle(issue.priority);
 
         const card = document.createElement('div');
