@@ -27,11 +27,16 @@
                     type="text" 
                     id="searchInput" 
                     oninput="handleSearchInput(event)" 
+                    onkeydown="if(event.key === 'Enter') searchIssues(this.value)"
                     placeholder="Search issues..." 
                     class="input input-bordered w-full pl-10 h-11 bg-white focus:outline-none focus:border-[#4A00FF] border-gray-200 transition-colors"
                 >
             </div>
-            <button class="btn btn-primary bg-[#4A00FF] hover:bg-indigo-700 border-none text-white normal-case h-11 min-h-0 px-6 font-semibold">+ New Issue</button>
+            <button 
+                onclick="searchIssues(document.getElementById('searchInput').value)"
+                class="btn btn-primary bg-[#4A00FF] hover:bg-indigo-700 border-none text-white normal-case h-11 min-h-0 px-8 font-semibold">
+                Search
+            </button>
         </div>
     </nav>
 
