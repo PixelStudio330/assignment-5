@@ -23,4 +23,4 @@ Ans: An arrow function is a shorter way to write functions in JS.
 It was introduced in ES6 and uses the "=>" syntax to define a function.
 
 <strong>5️⃣ What are template literals?</strong><br><br>
-Ans: Template literals are a way of writing strings in JS using backticks (` `) instead of quotation marks. They allow variables and expressions to be inserted directly inside a string using the ${} syntax. This makes it easier to include values inside text without using traditional string concatenation. Template literals also allow multi line strings to be written more naturally.
+Ans: Template literals are a way of writing strings in JS using backticks (` `) instead of quotation marks. They allow variables and expressions to be inserted directly inside a string using the ${} syntax. This makes it easier to include values inside text without using traditional string concatenation. Template literals also allow multi line strings to be written more naturally. 
